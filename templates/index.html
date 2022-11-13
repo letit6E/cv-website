@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Rustam Shangareev | CV</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rustam Shangareev | CV">
+    <meta name="author" content="Rustam Shangareev">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/github-activity/github-activity.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/octicons/octicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fonts/lato.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fonts/montserrat.css') }}">
+    <link id="theme-style" rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- Global CSS -->
+
+    <!-- Plugins CSS -->
+
+    <!-- github acitivity css -->
+
+    <script type="text/javascript" src="{{ url_for('static',filename='plugins/github-activity/mustache.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='plugins/github-activity/github-activity.js') }}"></script>
+    
+    <!-- Theme CSS -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="{{ url_for('static', filename='plugins/other/html5shiv.js') }}"> </script>
+        <script src="{{ url_for('static', filename='plugins/other/respond.min.js') }}"> </script>
+    <![endif]-->
+    
+</head> 
+
+<body>
+    <!-- ******HEADER****** --> 
+    <header class="header">
+        <div class="container">                       
+            <img class="profile-image img-fluid pull-left" src="static/images/20221104234349663.png" alt="Rustam Shangareev photo" />
+            <div class="profile-content pull-left">
+                <h1 class="name">Rustam Shangareev</h1>
+                <h2 class="desc">Student of SE, SPbU</h2>   
+                <ul class="social list-inline">
+                    <li><a href="https://vk.com/letit6e" target="_blank"><i class="fa fa-vk"></i></a></li>                   
+                    <li><a href="https://github.com/letit6e" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.instagram.com/letit6e/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li class="last-item"><a href="mailto:rustam.letitbe@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>                                 
+                </ul> 
+            </div><!--//profile-->
+            <a class="btn btn-cta-primary pull-right" href="http://t.me/let1t6e/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>              
+        </div><!--//container-->
+    </header><!--//header-->
+    
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>I'm a second-year student of software engineering at St. Petersburg State University. I'm interested in the topics of machine learning, data analysis, mathematics and competitive programming.</p>    
+         
+        <p>I have a flexible and positive approach to work, and am open to learning new skills and many existing ones. I consider myself a good listener and student, able to communicate well with a group and on an individual level. Others consider me a pleasant, cheerful and friendly person who is easy to work with in a team. I'm looking for a job that will allow me to develop, grow and use my existing skills.</p>
+                         
+                        </div><!--//content-->
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Student of Software Engineering</h3>
+                                <h4 class="university">St. Petersburg State University <span class="year">(2021-present)</span></h4>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> HSD with honors</h3>
+                                <h4 class="university">Secondary School No. 1 in Oktyabrsky, Republic of Bashkortostan <span class="year">(2010-2021)</span></h4>
+                            </div><!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+
+                <section class="github section">
+                    <div class="section-inner">
+                        <h2 class="heading">My GitHub</h2>                   
+                        <div id="ghfeed" class="ghfeed">
+                        </div>
+                        
+                    </div><!--//secton-inner-->
+                </section><!--//section-->
+
+                <aside class="testimonials aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Testimonials</h2>
+                        <div class="content">
+
+                            {% for post in posts %}
+
+                            <div class="item">
+                                <blockquote class="quote">                                  
+                                    <p><i class="fa fa-quote-left"></i>{{ post.text }}</p>
+                                </blockquote>                
+                                <p class="source"><span class="name">{{ post.name }}</span><br /><span class="title">{{ post.position }}</span></p>
+                            </div><!--//item-->
+
+                            {% endfor %}
+                            
+                            <p><a class="more-link" href="#"><i class="fa fa-arrow-down"></i> Write a testimonial or see more</a></p> 
+                            
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+
+                
+
+            </div><!--//primary-->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                 <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading sr-only">Basic Information</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Saint-Petersburg, Russia</li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:rustam.letitbe@gmail.com">rustam.letitbe@gmail.com</a></li>
+                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="https://letitbe.hackerclass.ru" target="_blank">https://letitbe.hackerclass.ru</a></li>
+                            </ul>
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//aside-->
+                
+                <aside class="skills aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Skills</h2>
+                        <div class="content">
+                            <!-- <p class="intro">
+                                Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Coderwall profile so people can get more info there.</p> -->
+                            
+                            <div class="skillset">
+                               
+                                <div class="item">
+                                    <h3 class="level-title">Kotlin<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Experience with Spring, TornadoFX(JavaFX), Compose Desktop, study projects">Intermediate</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="75%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">Python<span class="level-label" title="Experience with numpy, pandas, study projects">Intermediate</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="70%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">C &amp; C++<span class="level-label" title="Study projects in pure C and algorithmic experience in C++">Intermediate</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="65%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">HTML5, CSS3<span class="level-label">Advanced Beginner</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="50%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">OCaml<span class="level-label">Beginner</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="30%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <!-- <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p>  -->
+                            </div>              
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//section-->
+                       
+                <aside class="languages aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Languages</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li class="item">
+                                    <span class="title"><strong>Russian:</strong></span>
+                                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>English:</strong></span>
+                                    <span class="level">Intermediate <br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+                                </li><!--//item-->
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                
+                <aside class="list music aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">My friends</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-building-o"></i> <a href="https://chpu-rubin.ru/" target="_blank">RPA "Rubin"</a></li>
+                                <li><i class="fa fa-user"></i> <a href="https://zeromac.ru" target="_blank">mac</a></li>
+                                <li><i class="fa fa-building-o"></i> <a href="https://spaaft.com" target="_blank">Spaaft</a></li>
+                                <li><i class="fa fa-user"></i> <a href="https://yevdokimovdanil.onrender.com/" target="_blank">Yevdokimov Danil</a></li>
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+
+                <aside class="testimonials aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Write a testimonial</h2>
+                        <div class="content">
+                            <form action="{{ url_for('add_post') }}" method="POST">
+                                <div class="form-group">
+                                    <label for="formControlName">Your name</label>
+                                    <input type="name" class="form-control" required="required" name="name" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formControlPosition">Your position</label>
+                                    <input type="position" class="form-control" name="position" id="position" placeholder="Software Engineer at Google">
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">Comment:</label>
+                                    <textarea class="form-control" name="text" id="text" required="required" onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-cta-primary center-block"> Post</button>
+                            </form>
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+
+              
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+                <small class="copyright">Made with <i class="fa fa-heart"> </i> by Rustam Shangareev</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+ 
+    <!-- Javascript -->
+    <script type="text/javascript" src="{{ url_for('static',filename='plugins/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='plugins/jquery-migrate-1.2.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='plugins/jquery-rss/dist/jquery.rss.min.js') }}"></script>
+    <!-- github activity plugin -->
+    <script type="text/javascript" src="{{ url_for('static',filename='plugins/github-activity/mustache.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='plugins/github-activity/github-activity.js') }}"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/main.js') }}"></script>
+</body>
+</html> 
+
