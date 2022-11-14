@@ -1,308 +1,952 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"> <!--<![endif]-->
 <head>
-    <title>Rustam Shangareev | CV</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rustam Shangareev | CV">
-    <meta name="author" content="Rustam Shangareev">
+	<title>Rustam Shangareev | CV</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Rustam Shangareev | CV">
+	<meta name="author" content="Rustam Shangareev">
 
-    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/github-activity/github-activity.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/font-awesome/css/font-awesome.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/octicons/octicons.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fonts/lato.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fonts/montserrat.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='plugins/github-activity/github-activity.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='plugins/font-awesome/css/font-awesome.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='plugins/octicons/octicons.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='plugins/fonts/lato.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='plugins/fonts/montserrat.css') }}">
 
-    <link id="theme-style" rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link id="theme-style" rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-       ym(91163803, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-       });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/91163803" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+        ym(91163803, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+	</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/91163803" style="position:absolute; left:-9999px;" alt=""/></div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
 
-    <script type="text/javascript" src="{{ url_for('static',filename='plugins/github-activity/mustache.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static',filename='plugins/github-activity/github-activity.js') }}"></script>
+	<script type="text/javascript"
+			src="{{ url_for('static',filename='plugins/github-activity/mustache.min.js') }}"></script>
+	<script type="text/javascript"
+			src="{{ url_for('static',filename='plugins/github-activity/github-activity.js') }}"></script>
 
-    <!--[if lt IE 9]>
-        <script src="{{ url_for('static', filename='plugins/other/html5shiv.js') }}"> </script>
-        <script src="{{ url_for('static', filename='plugins/other/respond.min.js') }}"> </script>
-    <![endif]-->
+	<!--[if lt IE 9]>
+	<script src="{{ url_for('static', filename='plugins/other/html5shiv.js') }}"></script>
+	<script src="{{ url_for('static', filename='plugins/other/respond.min.js') }}"></script>
+	<![endif]-->
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <img class="profile-image img-fluid pull-left" src="static/images/profile.png" alt="Rustam Shangareev photo" />
-            <div class="profile-content pull-left">
-                <h1 class="name">Rustam Shangareev</h1>
-                <h2 class="desc">Student of SE, SPbU</h2>
-                <ul class="social list-inline">
-                    <li><a href="https://vk.com/letit6e" target="_blank"><i class="fa fa-vk"></i></a></li>
-                    <li><a href="https://github.com/letit6e" target="_blank"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://www.instagram.com/letit6e/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li class="last-item"><a href="mailto:rustam.letitbe@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-            </div>
-            <a class="btn btn-cta-primary pull-right" href="http://t.me/let1t6e/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
-        </div>
-    </header>
+<header class="header">
+	<div class="container">
+		<img class="profile-image img-fluid pull-left" src="static/images/profile.png" alt="Rustam Shangareev photo"/>
+		<div class="profile-content pull-left">
+			<h1 class="name">Rustam Shangareev</h1>
+			<h2 class="desc">Student of SE, SPbU</h2>
+			<ul class="social list-inline">
+				<li><a href="https://vk.com/letit6e" target="_blank"><i class="fa fa-vk"></i></a></li>
+				<li><a href="https://github.com/letit6e" target="_blank"><i class="fa fa-github"></i></a></li>
+				<li><a href="https://www.instagram.com/letit6e/" target="_blank"><i class="fa fa-instagram"></i></a>
+				</li>
+				<li class="last-item"><a href="mailto:rustam.letitbe@gmail.com" target="_blank"><i
+						class="fa fa-envelope"></i></a></li>
+			</ul>
+		</div>
+		<a class="btn btn-cta-primary pull-right" href="http://t.me/let1t6e/" target="_blank"><i
+				class="fa fa-paper-plane"></i> Contact Me</a>
+	</div>
+</header>
 
-    <div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary col-md-8 col-sm-12 col-xs-12">
-                <section class="about section">
-                    <div class="section-inner">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
-                            <p>I'm a second-year student of software engineering at St. Petersburg State University. I'm interested in the topics of machine learning, data analysis, mathematics and competitive programming.</p>
+<div class="container sections-wrapper">
+	<div class="row div-mobile">
+		<section class="info aside section">
+			<div class="section-inner">
+				<h2 class="heading sr-only">Basic Information</h2>
+				<div class="content">
+					<ul class="list-unstyled">
+						<li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Saint-Petersburg,
+							Russia
+						</li>
+						<li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a
+								href="mailto:rustam.letitbe@gmail.com">rustam.letitbe@gmail.com</a></li>
+						<li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a
+								href="https://letitbe.hackerclass.ru"
+								target="_blank">https://letitbe.hackerclass.ru</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="about section">
+			<div class="section-inner">
+				<h2 class="heading">About Me</h2>
+				<div class="content">
+					<p>I'm a second-year student of software engineering at St. Petersburg State University. I'm
+						interested in the topics of machine learning, data analysis, mathematics and competitive
+						programming.</p>
 
-        <p>I have a flexible and positive approach to work, and am open to learning new skills and many existing ones. I consider myself a good listener and student, able to communicate well with a group and on an individual level. Others consider me a pleasant, cheerful and friendly person who is easy to work with in a team. I'm looking for a job that will allow me to develop, grow and use my existing skills.</p>
+					<p>I have a flexible and positive approach to work, and am open to learning new skills and many
+						existing ones. I consider myself a good listener and student, able to communicate well with
+						a group and on an individual level. Others consider me a pleasant, cheerful and friendly
+						person who is easy to work with in a team. I'm looking for a job that will allow me to
+						develop, grow and use my existing skills.</p>
 
-                        </div>
-                    </div>
-                </section>
+				</div>
+			</div>
+		</section>
+		<section class="education aside section">
+			<div class="section-inner">
+				<h2 class="heading">Education</h2>
+				<div class="content">
+					<div class="item">
+						<h3 class="title"><i class="fa fa-graduation-cap"></i> Student of Software Engineering</h3>
+						<h4 class="university">St. Petersburg State University <span
+								class="year">(2021-present)</span></h4>
+					</div>
+					<div class="item">
+						<h3 class="title"><i class="fa fa-graduation-cap"></i> HSD with honors</h3>
+						<h4 class="university">Secondary School No. 1 in Oktyabrsky, Republic of Bashkortostan <span
+								class="year">(2010-2021)</span></h4>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                <section class="github section">
-                    <div class="section-inner">
-                        <h2 class="heading">My GitHub</h2>
-                        <div id="ghfeed" class="ghfeed">
-                        </div>
+		<section class="skills aside section">
+			<div class="section-inner">
+				<h2 class="heading">Skills</h2>
+				<div class="content">
 
-                    </div>
-                </section>
+					<div class="skillset">
 
-                <section class="projects section">
-                    <div class="section-inner">
-                        <h2 class="heading">My edu projects</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title"><a href="https://github.com/letit6E/edu-projects/tree/main/19.%20Weather%20graphics%20app" target="_blank">Weather application</a> <span class="label label-success"> Graphics</span></h3>
-                                <p class="summary">Graphic application for displaying weather with data from 2 different services in the city of St. Petersburg, Russia.</p>
-                                <p><a class="more-link" href="https://github.com/letit6E/edu-projects/tree/main/19.%20Weather%20graphics%20app" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
-                            </div>
-                            <div class="item">
-                                <h3 class="title"><a href="https://github.com/letit6E/edu-projects/tree/main/14.%20Blackjack" target="_blank">Blackjack application</a> <span class="label label-primary"> Console</span></h3>
-                                <p class="summary">Console application that simulates the game of blackjack with summarizing profit statistics of various strategies. </p>
-                                <p><a class="more-link" href="https://github.com/letit6E/edu-projects/tree/main/14.%20Blackjack" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
-                            </div>
-                            <div class="item">
-                                <h3 class="title"><a href="https://github.com/letit6E/edu-projects/tree/main/13.%20Filters%20OOP" target="_blank">Image filter application</a> <span class="label label-primary"> Console</span></h3>
-                                <p class="summary">Console application for image processing with one of the proposed filters: gray, Sobel filter, median filter, Gaussian filter.</p>
-                                <p><a class="more-link" href="https://github.com/letit6E/edu-projects/tree/main/13.%20Filters%20OOP" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
-                            </div>
+						<div class="item">
+							<h3 class="level-title">Kotlin<span class="level-label" data-toggle="tooltip"
+																data-placement="left" data-animation="true"
+																title="Experience with Spring, TornadoFX(JavaFX), Compose Desktop, study projects">Intermediate</span>
+							</h3>
+							<div class="level-bar">
+								<div class="level-bar-inner" data-level="75%">
+								</div>
+							</div>
+						</div>
 
-                            <a class="btn btn-cta-secondary" href="https://github.com/letit6E/edu-projects" target="_blank">More in GitHub repository <i class="fa fa-chevron-right"></i></a>
+						<div class="item">
+							<h3 class="level-title">Python<span class="level-label"
+																title="Experience with numpy, pandas, study projects">Intermediate</span>
+							</h3>
+							<div class="level-bar">
+								<div class="level-bar-inner" data-level="70%">
+								</div>
+							</div>
+						</div>
 
-                        </div>
-                    </div>
-                </section>
+						<div class="item">
+							<h3 class="level-title">C &amp; C++<span class="level-label"
+																	 title="Study projects in pure C and algorithmic experience in C++">Intermediate</span>
+							</h3>
+							<div class="level-bar">
+								<div class="level-bar-inner" data-level="65%">
+								</div>
+							</div>
+						</div>
 
-                <aside class="testimonials aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Testimonials</h2>
-                        <div class="content">
+						<div class="item">
+							<h3 class="level-title">HTML5, CSS3<span class="level-label">Advanced Beginner</span></h3>
+							<div class="level-bar">
+								<div class="level-bar-inner" data-level="50%">
+								</div>
+							</div>
+						</div>
 
-                            {% for post in posts %}
+						<div class="item">
+							<h3 class="level-title">OCaml<span class="level-label">Beginner</span></h3>
+							<div class="level-bar">
+								<div class="level-bar-inner" data-level="30%">
+								</div>
+							</div>
+						</div>
 
-                            <div class="item">
-                                <blockquote class="quote">
-                                    <p><i class="fa fa-quote-left"></i>{{ post.text }}</p>
-                                </blockquote>
-                                <p class="source"><span class="name">{{ post.name }}</span><br /><span class="title">{{ post.position }}</span></p>
-                            </div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                            {% endfor %}
+		<section class="github section">
+			<div class="section-inner">
+				<h2 class="heading">My GitHub</h2>
+				<div id="ghfeed" class="ghfeed">
+				</div>
 
-                            <p><a class="more-link" href="#write_testimonial"><i class="fa fa-arrow-right"></i> Write your testimonial</a></p>
+			</div>
+		</section>
 
-                        </div>
-                    </div>
-                </aside>
+		<section class="projects section">
+			<div class="section-inner">
+				<h2 class="heading">My edu projects</h2>
+				<div class="content">
+					<div class="item">
+						<h3 class="title"><a
+								href="https://github.com/letit6E/edu-projects/tree/main/19.%20Weather%20graphics%20app"
+								target="_blank">Weather application</a> <span
+								class="label label-success"> Graphics</span></h3>
+						<p class="summary">Graphic application for displaying weather with data from 2 different
+							services in the city of St. Petersburg, Russia.</p>
+						<p><a class="more-link"
+							  href="https://github.com/letit6E/edu-projects/tree/main/19.%20Weather%20graphics%20app"
+							  target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+					</div>
+					<div class="item">
+						<h3 class="title"><a
+								href="https://github.com/letit6E/edu-projects/tree/main/14.%20Blackjack"
+								target="_blank">Blackjack application</a> <span
+								class="label label-primary"> Console</span></h3>
+						<p class="summary">Console application that simulates the game of blackjack with summarizing
+							profit statistics of various strategies. </p>
+						<p><a class="more-link"
+							  href="https://github.com/letit6E/edu-projects/tree/main/14.%20Blackjack"
+							  target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+					</div>
+					<div class="item">
+						<h3 class="title"><a
+								href="https://github.com/letit6E/edu-projects/tree/main/13.%20Filters%20OOP"
+								target="_blank">Image filter application</a> <span
+								class="label label-primary"> Console</span></h3>
+						<p class="summary">Console application for image processing with one of the proposed
+							filters:
+							gray, Sobel filter, median filter, Gaussian filter.</p>
+						<p><a class="more-link"
+							  href="https://github.com/letit6E/edu-projects/tree/main/13.%20Filters%20OOP"
+							  target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+					</div>
+
+					<a class="btn btn-cta-secondary" href="https://github.com/letit6E/edu-projects" target="_blank">More
+						in GitHub repository <i class="fa fa-chevron-right"></i></a>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="languages aside section">
+			<div class="section-inner">
+				<h2 class="heading">Languages</h2>
+				<div class="content">
+					<ul class="list-unstyled">
+						<li class="item">
+							<span class="title"><strong>Russian:</strong></span>
+							<span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i
+									class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+									class="fa fa-star"></i> </span>
+						</li>
+						<li class="item">
+							<span class="title"><strong>English:</strong></span>
+							<span class="level">Intermediate <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="list music aside section">
+			<div class="section-inner">
+				<h2 class="heading">My friends</h2>
+				<div class="content">
+					<ul class="list-unstyled">
+						<li><i class="fa fa-building-o"></i> <a href="https://chpu-rubin.ru/" target="_blank">RPA
+							"Rubin"</a></li>
+						<li><i class="fa fa-user"></i> <a href="https://zeromac.ru" target="_blank">mac</a></li>
+						<li><i class="fa fa-building-o"></i> <a href="https://spaaft.com" target="_blank">Spaaft</a>
+						</li>
+						<li><i class="fa fa-user"></i> <a href="https://yevdokimovdanil.onrender.com/" target="_blank">Yevdokimov
+							Danil</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="write_testimonial" class="testimonials aside section">
+			<div class="section-inner">
+				<h2 class="heading">Write testimonial</h2>
+				<div class="content">
+					<form action="{{ url_for('add_post') }}" method="POST">
+						<div class="form-group">
+							<label for="formControlName">Your name</label>
+							<input type="name" class="form-control" required="required" name="name" id="name">
+						</div>
+						<div class="form-group">
+							<label for="formControlPosition">Your position</label>
+							<input type="position" class="form-control" name="position" id="position"
+								   placeholder="Software Engineer at Google">
+						</div>
+						<div class="form-group">
+							<label for="comment">Comment:</label>
+							<textarea class="form-control" name="text" id="text" required="required"
+									  onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))"></textarea>
+						</div>
+						<button type="submit" class="btn btn-cta-primary center-block"> Post</button>
+					</form>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="testimonials aside section">
+			<div class="section-inner">
+				<h2 class="heading">Testimonials</h2>
+				<div class="content">
+
+					{% for post in posts %}
+
+					<div class="item">
+						<blockquote class="quote">
+							<p><i class="fa fa-quote-left"></i>{{ post.text }}</p>
+						</blockquote>
+						<p class="source"><span class="name">{{ post.name }}</span><br/><span class="title">{{ post.position }}</span>
+						</p>
+					</div>
+
+					{% endfor %}
+
+					<p><a class="more-link" href="#write_testimonial"><i class="fa fa-arrow-right"></i> Write your
+						testimonial</a></p>
+
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<div class="row div-desktop">
+		<div class="primary col-md-8 col-sm-12 col-xs-12">
+			<section class="about section">
+				<div class="section-inner">
+					<h2 class="heading">About Me</h2>
+					<div class="content">
+						<p>I'm a second-year student of software engineering at St. Petersburg State University. I'm
+							interested in the topics of machine learning, data analysis, mathematics and competitive
+							programming.</p>
+
+						<p>I have a flexible and positive approach to work, and am open to learning new skills and many
+							existing ones. I consider myself a good listener and student, able to communicate well with
+							a group and on an individual level. Others consider me a pleasant, cheerful and friendly
+							person who is easy to work with in a team. I'm looking for a job that will allow me to
+							develop, grow and use my existing skills.</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="github section">
+				<div class="section-inner">
+					<h2 class="heading">My GitHub</h2>
+					<div id="ghfeed" class="ghfeed" style="position: relative;">
+						<div class="gha-feed">
+							<div class="gha-header">
+								<div class="gha-github-icon"><span class="octicon octicon-mark-github"></span></div>
+								<div class="gha-user-info"><a class="" href="https://github.com/letit6E"
+															  target="_blank">Rustam Shangareev</a>
+									<p><a class="" href="https://github.com/letit6E" target="_blank">letit6E</a></p>
+								</div>
+								<div class="gha-gravatar"><a class="" href="https://github.com/letit6E" target="_blank"><img
+										src="https://avatars.githubusercontent.com/u/87411602?v=4"></a></div>
+							</div>
+							<div class="gha-push"></div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span class="octicon mega-octicon octicon-globe"></span>
+								</div>
+								<div class="gha-message">
+									<div class="gha-time">about 15 hours ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> open
+									sourced <a class="" href="https://github.com/letit6E/edu-projects" target="_blank">letit6E/edu-projects</a>
+								</div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-pull-request"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">14 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> closed
+									pull request <a class="" href="https://github.com/AntonKozlov/os226-2022/pull/121"
+													target="_blank">AntonKozlov/os226-2022#121</a><br>
+									<div class="gha-gravatar-user"><img
+											src="https://avatars.githubusercontent.com/u/87411602?"
+											class="gha-gravatar-small"></div>
+									<small>HW6</small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">14 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/d02585e36dd38c505675f6df7de9c6d2aab79aa2"
+																	   target="_blank">d02585</a> Conflict fixed</small>
+										</li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-pull-request"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">14 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> closed
+									pull request <a class="" href="https://github.com/AntonKozlov/os226-2022/pull/121"
+													target="_blank">AntonKozlov/os226-2022#121</a><br>
+									<div class="gha-gravatar-user"><img
+											src="https://avatars.githubusercontent.com/u/87411602?"
+											class="gha-gravatar-small"></div>
+									<small>HW6</small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">14 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/90eb0eb2d9834440366614bde566e030663c2cd6"
+																	   target="_blank">90eb0e</a> HW6 bugs fixed</small>
+										</li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">14 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/8bf857e95e52a16a1ce5f1de270775970b4d16a7"
+																	   target="_blank">8bf857</a> bottom function
+											changed</small></li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">14 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/a5f899d964cc32e5bb29a0ccb4be630a30fa0a26"
+																	   target="_blank">a5f899</a> HW6 changed</small>
+										</li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">14 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/1d003ac7959caa39898d1d0ddcb429e9087f4e8b"
+																	   target="_blank">1d003a</a> Feat: hw6 bugs
+											fixed</small></li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">14 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/e5256f0b4f005d216befcd34012a0ae0e0aac8bd"
+																	   target="_blank">e5256f</a> Add impl of
+											hw6</small></li>
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/92ebe56be2a95cfb500d3072bfeef53961dbe479"
+																	   target="_blank">92ebe5</a> Add other
+											files</small></li>
+									</ul>
+									<small class="gha-message-commits"><a
+											href="https://github.com/letit6E/os226-2022/compare/65745de8603d4081b3270198628f9fcb27c02c62...92ebe56be2a95cfb500d3072bfeef53961dbe479">View
+										comparison for these 2 commits »</a></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">28 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/65745de8603d4081b3270198628f9fcb27c02c62"
+																	   target="_blank">65745d</a> fixed hw4 bugs</small>
+										</li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">28 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/13dd9781a462c7b72e8e34bbe43bd6de5085d5e8"
+																	   target="_blank">13dd97</a> modified
+											sched.c</small></li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">28 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/32190b4ff4f6f7f876b0a840229d8c099f5ee72d"
+																	   target="_blank">32190b</a> fixed hw4</small></li>
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/b575dba195ef6d6a49b51de12b889bda4ccdcb8a"
+																	   target="_blank">b575db</a> Merge branch 'master'
+											of https://github.com/letit6e/os226-2022</small></li>
+									</ul>
+									<small class="gha-message-commits"><a
+											href="https://github.com/letit6E/os226-2022/compare/2037160fafd315bde430430ea796a43fdcd7057a...b575dba195ef6d6a49b51de12b889bda4ccdcb8a">View
+										comparison for these 2 commits »</a></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">28 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/d28e8aa8ae92b4a4b08266f63bd7d955"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/6a8cdc6c1168386c6d2dce8a1becccbf9324b2e0"
+																	   target="_blank">6a8cdc</a> HW2 solution</small>
+										</li>
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/d28e8aa8ae92b4a4b08266f63bd7d955"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/fa1d9d43135b27fe170a69ee52826f5616d69c5e"
+																	   target="_blank">fa1d9d</a> HW3</small></li>
+									</ul>
+									<small class="gha-message-commits"><a
+											href="https://github.com/letit6E/os226-2022/compare/2c1c7ad215dab5d4176fa7c0858289f897db0732...2037160fafd315bde430430ea796a43fdcd7057a">3
+										more commits »</a></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">28 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/2c1c7ad215dab5d4176fa7c0858289f897db0732"
+																	   target="_blank">2c1c7a</a> hw4 added</small></li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div id="" class="gha-activity">
+								<div class="gha-activity-icon"><span
+										class="octicon mega-octicon octicon-git-commit"></span></div>
+								<div class="gha-message">
+									<div class="gha-time">28 days ago</div>
+									<a class="" href="https://github.com/letit6E" target="_blank">letit6E</a> pushed to
+									<a class="" href="https://github.com/letit6E/os226-2022/tree/master"
+									   target="_blank">master</a> at <a class=""
+																		href="https://github.com/letit6E/os226-2022"
+																		target="_blank">letit6E/os226-2022</a><br>
+									<ul class="gha-commits">
+										<li><small><img class="gha-gravatar-commit"
+														src="https://gravatar.com/avatar/9c7d0c3d3d58edf801309da632b2b75e"
+														width="16"> <a class="gha-sha"
+																	   href="https://github.com/letit6E/os226-2022/commit/c2bbbb52dc7fe1f0c6c314d3790e66632b4fb91c"
+																	   target="_blank">c2bbbb</a> .github folder
+											added</small></li>
+									</ul>
+									<small class="gha-message-commits"></small></div>
+								<div class="gha-clear"></div>
+							</div>
+							<div class="gha-push-small"></div>
+							<div class="gha-footer">Public Activity <a
+									href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub
+								Activity Stream</a></div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="projects section">
+				<div class="section-inner">
+					<h2 class="heading">My edu projects</h2>
+					<div class="content">
+						<div class="item">
+							<h3 class="title"><a
+									href="https://github.com/letit6E/edu-projects/tree/main/19.%20Weather%20graphics%20app"
+									target="_blank">Weather application</a> <span
+									class="label label-success"> Graphics</span></h3>
+							<p class="summary">Graphic application for displaying weather with data from 2 different
+								services in the city of St. Petersburg, Russia.</p>
+							<p><a class="more-link"
+								  href="https://github.com/letit6E/edu-projects/tree/main/19.%20Weather%20graphics%20app"
+								  target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+						</div>
+						<div class="item">
+							<h3 class="title"><a
+									href="https://github.com/letit6E/edu-projects/tree/main/14.%20Blackjack"
+									target="_blank">Blackjack application</a> <span
+									class="label label-primary"> Console</span></h3>
+							<p class="summary">Console application that simulates the game of blackjack with summarizing
+								profit statistics of various strategies. </p>
+							<p><a class="more-link"
+								  href="https://github.com/letit6E/edu-projects/tree/main/14.%20Blackjack"
+								  target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+						</div>
+						<div class="item">
+							<h3 class="title"><a
+									href="https://github.com/letit6E/edu-projects/tree/main/13.%20Filters%20OOP"
+									target="_blank">Image filter application</a> <span class="label label-primary"> Console</span>
+							</h3>
+							<p class="summary">Console application for image processing with one of the proposed
+								filters: gray, Sobel filter, median filter, Gaussian filter.</p>
+							<p><a class="more-link"
+								  href="https://github.com/letit6E/edu-projects/tree/main/13.%20Filters%20OOP"
+								  target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+						</div>
+
+						<a class="btn btn-cta-secondary" href="https://github.com/letit6E/edu-projects" target="_blank">More
+							in GitHub repository <i class="fa fa-chevron-right"></i></a>
+
+					</div>
+				</div>
+			</section>
+
+			<aside class="testimonials aside section">
+				<div class="section-inner">
+					<h2 class="heading">Testimonials</h2>
+					<div class="content">
 
 
+						<p><a class="more-link" href="#write_testimonial"><i class="fa fa-arrow-right"></i> Write your
+							testimonial</a></p>
 
-            </div>
-            <div class="secondary col-md-4 col-sm-12 col-xs-12">
-                 <aside class="info aside section">
-                    <div class="section-inner">
-                        <h2 class="heading sr-only">Basic Information</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Saint-Petersburg, Russia</li>
-                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:rustam.letitbe@gmail.com">rustam.letitbe@gmail.com</a></li>
-                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="https://letitbe.hackerclass.ru" target="_blank">https://letitbe.hackerclass.ru</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-
-                <aside class="skills aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Skills</h2>
-                        <div class="content">
-
-                            <div class="skillset">
-
-                                <div class="item">
-                                    <h3 class="level-title">Kotlin<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Experience with Spring, TornadoFX(JavaFX), Compose Desktop, study projects">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="75%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <h3 class="level-title">Python<span class="level-label" title="Experience with numpy, pandas, study projects">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="70%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <h3 class="level-title">C &amp; C++<span class="level-label" title="Study projects in pure C and algorithmic experience in C++">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="65%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <h3 class="level-title">HTML5, CSS3<span class="level-label">Advanced Beginner</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="50%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <h3 class="level-title">OCaml<span class="level-label">Beginner</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="30%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-                <aside class="languages aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Languages</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>Russian:</strong></span>
-                                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                                </li>
-                                <li class="item">
-                                    <span class="title"><strong>English:</strong></span>
-                                    <span class="level">Intermediate <br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-
-                <aside class="education aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Student of Software Engineering</h3>
-                                <h4 class="university">St. Petersburg State University <span class="year">(2021-present)</span></h4>
-                            </div>
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> HSD with honors</h3>
-                                <h4 class="university">Secondary School No. 1 in Oktyabrsky, Republic of Bashkortostan <span class="year">(2010-2021)</span></h4>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+					</div>
+				</div>
+			</aside>
 
 
-                <aside class="list music aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">My friends</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-building-o"></i> <a href="https://chpu-rubin.ru/" target="_blank">RPA "Rubin"</a></li>
-                                <li><i class="fa fa-user"></i> <a href="https://zeromac.ru" target="_blank">mac</a></li>
-                                <li><i class="fa fa-building-o"></i> <a href="https://spaaft.com" target="_blank">Spaaft</a></li>
-                                <li><i class="fa fa-user"></i> <a href="https://yevdokimovdanil.onrender.com/" target="_blank">Yevdokimov Danil</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
+		</div>
+		<div class="secondary col-md-4 col-sm-12 col-xs-12">
+			<aside class="info aside section">
+				<div class="section-inner">
+					<h2 class="heading sr-only">Basic Information</h2>
+					<div class="content">
+						<ul class="list-unstyled">
+							<li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Saint-Petersburg,
+								Russia
+							</li>
+							<li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a
+									href="mailto:rustam.letitbe@gmail.com">rustam.letitbe@gmail.com</a></li>
+							<li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a
+									href="https://letitbe.hackerclass.ru"
+									target="_blank">https://letitbe.hackerclass.ru</a></li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+
+			<aside class="skills aside section">
+				<div class="section-inner">
+					<h2 class="heading">Skills</h2>
+					<div class="content">
+
+						<div class="skillset">
+
+							<div class="item">
+								<h3 class="level-title">Kotlin<span class="level-label" data-toggle="tooltip"
+																	data-placement="left" data-animation="true" title=""
+																	data-original-title="Experience with Spring, TornadoFX(JavaFX), Compose Desktop, study projects">Intermediate</span>
+								</h3>
+								<div class="level-bar">
+									<div class="level-bar-inner" data-level="75%" style="width: 75%;">
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<h3 class="level-title">Python<span class="level-label" title=""
+																	data-original-title="Experience with numpy, pandas, study projects">Intermediate</span>
+								</h3>
+								<div class="level-bar">
+									<div class="level-bar-inner" data-level="70%" style="width: 70%;">
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<h3 class="level-title">C &amp; C++<span class="level-label" title=""
+																		 data-original-title="Study projects in pure C and algorithmic experience in C++">Intermediate</span>
+								</h3>
+								<div class="level-bar">
+									<div class="level-bar-inner" data-level="65%" style="width: 65%;">
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<h3 class="level-title">HTML5, CSS3<span class="level-label" data-original-title=""
+																		 title="">Advanced Beginner</span></h3>
+								<div class="level-bar">
+									<div class="level-bar-inner" data-level="50%" style="width: 50%;">
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<h3 class="level-title">OCaml<span class="level-label" data-original-title="" title="">Beginner</span>
+								</h3>
+								<div class="level-bar">
+									<div class="level-bar-inner" data-level="30%" style="width: 30%;">
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</aside>
+
+			<aside class="languages aside section">
+				<div class="section-inner">
+					<h2 class="heading">Languages</h2>
+					<div class="content">
+						<ul class="list-unstyled">
+							<li class="item">
+								<span class="title"><strong>Russian:</strong></span>
+								<span class="level">Native Speaker <br class="visible-xs"><i class="fa fa-star"></i> <i
+										class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+										class="fa fa-star"></i> </span>
+							</li>
+							<li class="item">
+								<span class="title"><strong>English:</strong></span>
+								<span class="level">Intermediate <br class="visible-sm visible-xs"><i
+										class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+										class="fa fa-star"></i></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+
+			<aside class="education aside section">
+				<div class="section-inner">
+					<h2 class="heading">Education</h2>
+					<div class="content">
+						<div class="item">
+							<h3 class="title"><i class="fa fa-graduation-cap"></i> Student of Software Engineering</h3>
+							<h4 class="university">St. Petersburg State University <span
+									class="year">(2021-present)</span></h4>
+						</div>
+						<div class="item">
+							<h3 class="title"><i class="fa fa-graduation-cap"></i> HSD with honors</h3>
+							<h4 class="university">Secondary School No. 1 in Oktyabrsky, Republic of Bashkortostan <span
+									class="year">(2010-2021)</span></h4>
+						</div>
+					</div>
+				</div>
+			</aside>
 
 
-
-                <aside id="write_testimonial" class="testimonials aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Write testimonial</h2>
-                        <div class="content">
-                            <form action="{{ url_for('add_post') }}" method="POST">
-                                <div class="form-group">
-                                    <label for="formControlName">Your name</label>
-                                    <input type="name" class="form-control" required="required" name="name" id="name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="formControlPosition">Your position</label>
-                                    <input type="position" class="form-control" name="position" id="position" placeholder="Software Engineer at Google">
-                                </div>
-                                <div class="form-group">
-                                    <label for="comment">Comment:</label>
-                                    <textarea class="form-control" name="text" id="text" required="required" onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-cta-primary center-block"> Post</button>
-                            </form>
-
-                        </div>
-                    </div>
-                </aside>
+			<aside class="list music aside section">
+				<div class="section-inner">
+					<h2 class="heading">My friends</h2>
+					<div class="content">
+						<ul class="list-unstyled">
+							<li><i class="fa fa-building-o"></i> <a href="https://chpu-rubin.ru/" target="_blank">RPA
+								"Rubin"</a></li>
+							<li><i class="fa fa-user"></i> <a href="https://zeromac.ru" target="_blank">mac</a></li>
+							<li><i class="fa fa-building-o"></i> <a href="https://spaaft.com" target="_blank">Spaaft</a>
+							</li>
+							<li><i class="fa fa-user"></i> <a href="https://yevdokimovdanil.onrender.com/"
+															  target="_blank">Yevdokimov Danil</a></li>
+						</ul>
+					</div>
+				</div>
+			</aside>
 
 
+			<aside id="write_testimonial" class="testimonials aside section">
+				<div class="section-inner">
+					<h2 class="heading">Write testimonial</h2>
+					<div class="content">
+						<form action="/" method="POST">
+							<div class="form-group">
+								<label for="formControlName">Your name</label>
+								<input type="name" class="form-control" required="required" name="name" id="name">
+							</div>
+							<div class="form-group">
+								<label for="formControlPosition">Your position</label>
+								<input type="position" class="form-control" name="position" id="position"
+									   placeholder="Software Engineer at Google">
+							</div>
+							<div class="form-group">
+								<label for="comment">Comment:</label>
+								<textarea class="form-control" name="text" id="text" required="required"
+										  onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))"></textarea>
+							</div>
+							<button type="submit" class="btn btn-cta-primary center-block"> Post</button>
+						</form>
 
-            </div>
-        </div>
-    </div>
+					</div>
+				</div>
+			</aside>
 
-    <footer class="footer">
-        <div class="container text-center">
-                <small class="copyright">by Rustam Shangareev</small>
-        </div>
-    </footer>
 
-    <script type="text/javascript" src="{{ url_for('static',filename='plugins/jquery-1.11.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static',filename='plugins/jquery-migrate-1.2.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static',filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static',filename='plugins/jquery-rss/dist/jquery.rss.min.js') }}"></script>
+		</div>
+	</div>
 
-    <script type="text/javascript" src="{{ url_for('static',filename='plugins/github-activity/mustache.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static',filename='plugins/github-activity/github-activity.js') }}"></script>
+</div>
+</div>
 
-    <script type="text/javascript" src="{{ url_for('static',filename='js/main.js') }}"></script>
+<footer class="footer">
+	<div class="container text-center">
+		<small class="copyright">by Rustam Shangareev</small>
+	</div>
+</footer>
+
+<script type="text/javascript" src="{{ url_for('static',filename='plugins/jquery-1.11.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='plugins/jquery-migrate-1.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript"
+		src="{{ url_for('static',filename='plugins/jquery-rss/dist/jquery.rss.min.js') }}"></script>
+
+<script type="text/javascript"
+		src="{{ url_for('static',filename='plugins/github-activity/mustache.min.js') }}"></script>
+<script type="text/javascript"
+		src="{{ url_for('static',filename='plugins/github-activity/github-activity.js') }}"></script>
+
+<script type="text/javascript" src="{{ url_for('static',filename='js/main.js') }}"></script>
 </body>
 </html>
 
