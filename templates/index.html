@@ -265,7 +265,8 @@
 						</li>
 						<li class="item">
 							<span class="title"><strong>English:</strong></span>
-							<span class="level">Intermediate <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+							<span class="level">Intermediate <br class="visible-xs"/><i class="fa fa-star"></i> <i
+									class="fa fa-star"></i> <i class="fa fa-star"></i></span>
 						</li>
 					</ul>
 				</div>
@@ -747,9 +748,21 @@
 					<h2 class="heading">Testimonials</h2>
 					<div class="content">
 
+						{% for post in posts %}
+
+						<div class="item">
+							<blockquote class="quote">
+								<p><i class="fa fa-quote-left"></i>{{ post.text }}</p>
+							</blockquote>
+							<p class="source"><span class="name">{{ post.name }}</span><br/><span class="title">{{ post.position }}</span>
+							</p>
+						</div>
+
+						{% endfor %}
 
 						<p><a class="more-link" href="#write_testimonial"><i class="fa fa-arrow-right"></i> Write your
 							testimonial</a></p>
+
 
 					</div>
 				</div>
