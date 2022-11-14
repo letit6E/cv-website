@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
     );
     
     /* Github Activity Feed - https://github.com/caseyscarborough/github-activity */
-    GitHubActivity.feed({ username: "letit6e", selector: "#ghfeed" });
+    GitHubActivity.feed({ username: "letit6e", selector: "#ghfeed", limit: 15 });
 
 
 });
