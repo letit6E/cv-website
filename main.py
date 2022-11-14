@@ -20,6 +20,11 @@ def hello_world():
     return render_template('index.html', posts=posts)
 
 
+@app.route('/yandex_efa2343b15c63d31.html')
+def webmaster():
+    return render_template('yandex_efa2343b15c63d31.html')
+
+
 @app.route('/', methods=['GET', 'POST'])
 def add_post():
     if request.method == "POST":
