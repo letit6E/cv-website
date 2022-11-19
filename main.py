@@ -32,7 +32,7 @@ def add_post():
         position = request.form.get('position', type=str, default="")
         text = request.form.get('text', type=str, default="")
 
-        if name != "" and text != "":
+        if any(c.isalpha() for c in name) and any(c.isalpha() for c in text):
             p = Post(name=name, position=position, text=text)
             db.session.add(p)
             db.session.commit()
