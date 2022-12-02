@@ -4,7 +4,7 @@ This repo contains the source files for the personal website letitbe.hackerclass
 
 ## Used technologies and frameworks:
 
-* Python(Flask)
-* HTML
+* Python(Flask, SQLAlchemy)
+* HTML5
 * CSS(Bootstrap, Font Awesome, Octicons, Less)
 * JavaScript(Jquery, HTML5 Shiv, Respond, Github Activity)
