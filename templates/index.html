@@ -290,55 +290,55 @@
 			</div>
 		</section>
 
-		<section id="write_testimonial" class="testimonials aside section">
-			<div class="section-inner">
-				<h2 class="heading">Write testimonial</h2>
-				<div class="content">
-					<form action="{{ url_for('add_post') }}" method="POST">
-						<div class="form-group">
-							<label for="formControlName">Your name</label>
-							<input type="name" class="form-control" required="required" name="name" id="name">
-						</div>
-						<div class="form-group">
-							<label for="formControlPosition">Your position</label>
-							<input type="position" class="form-control" name="position" id="position"
-								   placeholder="Software Engineer at Google">
-						</div>
-						<div class="form-group">
-							<label for="comment">Comment:</label>
-							<textarea class="form-control" name="text" id="text" required="required"
-									  onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))"></textarea>
-						</div>
-						<button type="submit" class="btn btn-cta-primary center-block"> Post</button>
-					</form>
-
-				</div>
-			</div>
-		</section>
-
-		<section class="testimonials aside section">
-			<div class="section-inner">
-				<h2 class="heading">Testimonials</h2>
-				<div class="content">
-
-					{% for post in posts %}
-
-					<div class="item">
-						<blockquote class="quote">
-							<p><i class="fa fa-quote-left"></i>{{ post.text }}</p>
-						</blockquote>
-						<p class="source"><span class="name">{{ post.name }}</span><br/><span class="title">{{ post.position }}</span>
-						</p>
-					</div>
-
-					{% endfor %}
-
-					<p><a class="more-link" href="#write_testimonial"><i class="fa fa-arrow-right"></i> Write your
-						testimonial</a></p>
-
-				</div>
-			</div>
-		</section>
+{#		<section id="write_testimonial" class="testimonials aside section">#}
+{#			<div class="section-inner">#}
+{#				<h2 class="heading">Write testimonial</h2>#}
+{#				<div class="content">#}
+{#					<form action="{{ url_for('add_post') }}" method="POST">#}
+{#						<div class="form-group">#}
+{#							<label for="formControlName">Your name</label>#}
+{#							<input type="name" class="form-control" required="required" name="name" id="name">#}
+{#						</div>#}
+{#						<div class="form-group">#}
+{#							<label for="formControlPosition">Your position</label>#}
+{#							<input type="position" class="form-control" name="position" id="position"#}
+{#								   placeholder="Software Engineer at Google">#}
+{#						</div>#}
+{#						<div class="form-group">#}
+{#							<label for="comment">Comment:</label>#}
+{#							<textarea class="form-control" name="text" id="text" required="required"#}
+{#									  onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))"></textarea>#}
+{#						</div>#}
+{#						<button type="submit" class="btn btn-cta-primary center-block"> Post</button>#}
+{#					</form>#}
+{##}
+{#				</div>#}
+{#			</div>#}
+{#		</section>#}
+{##}
+{#		<section class="testimonials aside section">#}
+{#			<div class="section-inner">#}
+{#				<h2 class="heading">Testimonials</h2>#}
+{#				<div class="content">#}
+{##}
+{#					{% for post in posts %}#}
+{##}
+{#					<div class="item">#}
+{#						<blockquote class="quote">#}
+{#							<p><i class="fa fa-quote-left"></i>{{ post.text }}</p>#}
+{#						</blockquote>#}
+{#						<p class="source"><span class="name">{{ post.name }}</span><br/><span class="title">{{ post.position }}</span>#}
+{#						</p>#}
+{#					</div>#}
+{##}
+{#					{% endfor %}#}
+{##}
+{#					<p><a class="more-link" href="#write_testimonial"><i class="fa fa-arrow-right"></i> Write your#}
+{#						testimonial</a></p>#}
+{##}
+{#				</div>#}
+{#			</div>#}
+{#		</section>#}
 
 	</div>
 
@@ -736,37 +736,37 @@
 								  target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
 						</div>
 
-						<a class="btn btn-cta-secondary" href="https://github.com/letit6E/edu-projects" target="_blank">More
-							in GitHub repository <i class="fa fa-chevron-right"></i></a>
+						<a class="btn btn-cta-secondary" href="https://github.com/letit6E" target="_blank">More
+							in GitHub Profile <i class="fa fa-chevron-right"></i></a>
 
 					</div>
 				</div>
 			</section>
 
-			<aside class="testimonials aside section">
-				<div class="section-inner">
-					<h2 class="heading">Testimonials</h2>
-					<div class="content">
-
-						{% for post in posts %}
-
-						<div class="item">
-							<blockquote class="quote">
-								<p><i class="fa fa-quote-left"></i>{{ post.text }}</p>
-							</blockquote>
-							<p class="source"><span class="name">{{ post.name }}</span><br/><span class="title">{{ post.position }}</span>
-							</p>
-						</div>
-
-						{% endfor %}
-
-						<p><a class="more-link" href="#write_testimonial_desktop"><i class="fa fa-arrow-right"></i> Write your
-							testimonial</a></p>
-
-
-					</div>
-				</div>
-			</aside>
+{#			<aside class="testimonials aside section">#}
+{#				<div class="section-inner">#}
+{#					<h2 class="heading">Testimonials</h2>#}
+{#					<div class="content">#}
+{##}
+{#						{% for post in posts %}#}
+{##}
+{#						<div class="item">#}
+{#							<blockquote class="quote">#}
+{#								<p><i class="fa fa-quote-left"></i>{{ post.text }}</p>#}
+{#							</blockquote>#}
+{#							<p class="source"><span class="name">{{ post.name }}</span><br/><span class="title">{{ post.position }}</span>#}
+{#							</p>#}
+{#						</div>#}
+{##}
+{#						{% endfor %}#}
+{##}
+{#						<p><a class="more-link" href="#write_testimonial_desktop"><i class="fa fa-arrow-right"></i> Write your#}
+{#							testimonial</a></p>#}
+{##}
+{##}
+{#					</div>#}
+{#				</div>#}
+{#			</aside>#}
 
 
 		</div>
@@ -909,31 +909,31 @@
 			</aside>
 
 
-			<aside id="write_testimonial_desktop" class="testimonials aside section">
-				<div class="section-inner">
-					<h2 class="heading">Write testimonial</h2>
-					<div class="content">
-						<form action="/" method="POST">
-							<div class="form-group">
-								<label for="formControlName">Your name</label>
-								<input type="name" class="form-control" required="required" name="name" id="name">
-							</div>
-							<div class="form-group">
-								<label for="formControlPosition">Your position</label>
-								<input type="position" class="form-control" name="position" id="position"
-									   placeholder="Software Engineer at Google">
-							</div>
-							<div class="form-group">
-								<label for="comment">Comment:</label>
-								<textarea class="form-control" name="text" id="text" required="required"
-										  onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))"></textarea>
-							</div>
-							<button type="submit" class="btn btn-cta-primary center-block"> Post</button>
-						</form>
-
-					</div>
-				</div>
-			</aside>
+{#			<aside id="write_testimonial_desktop" class="testimonials aside section">#}
+{#				<div class="section-inner">#}
+{#					<h2 class="heading">Write testimonial</h2>#}
+{#					<div class="content">#}
+{#						<form action="/" method="POST">#}
+{#							<div class="form-group">#}
+{#								<label for="formControlName">Your name</label>#}
+{#								<input type="name" class="form-control" required="required" name="name" id="name">#}
+{#							</div>#}
+{#							<div class="form-group">#}
+{#								<label for="formControlPosition">Your position</label>#}
+{#								<input type="position" class="form-control" name="position" id="position"#}
+{#									   placeholder="Software Engineer at Google">#}
+{#							</div>#}
+{#							<div class="form-group">#}
+{#								<label for="comment">Comment:</label>#}
+{#								<textarea class="form-control" name="text" id="text" required="required"#}
+{#										  onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))"></textarea>#}
+{#							</div>#}
+{#							<button type="submit" class="btn btn-cta-primary center-block"> Post</button>#}
+{#						</form>#}
+{##}
+{#					</div>#}
+{#				</div>#}
+{#			</aside>#}
 
 
 		</div>
